@@ -1,0 +1,30 @@
+body {
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #d3d3d3, #ffffff);
+    padding: 0rem;
+    margin: 0rem;
+    height: 100vh;
+    font-family: 'Poppin', sans-serif;
+}
+
+.title-area {
+    background-color: #d3d3d3;
+    height: 15vh;
+    position: relative;
+    box-shadow: #a9a9a9 0px 5px 5px;
+}
+
+.game-container {
+    height: 60vh;
+}
+
+.message-area {
+    background-color: #d3d3d3;
+    height: 12vh;
+    position: relative;
+    box-shadow: #a9a9a9 0px 5px 5px;
+}
+
+.buttons-container {
+    height: calc(100vh - (15vh + 60vh + 12vh));
+}
