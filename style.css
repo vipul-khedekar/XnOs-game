@@ -8,10 +8,18 @@ body {
 }
 
 .title-area {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #d3d3d3;
     height: 15vh;
+    padding: 1rem;
     position: relative;
     box-shadow: #a9a9a9 0px 5px 5px;
+    text-decoration: overline underline;
+    font-style: italic;
+    font-size: 3rem;
 }
 
 .game-container {
@@ -19,12 +27,18 @@ body {
 }
 
 .message-area {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #d3d3d3;
-    height: 12vh;
+    height: 10vh;
+    padding: 0.5rem;
     position: relative;
     box-shadow: #a9a9a9 0px 5px 5px;
+    font-size: 1.2rem;
 }
 
 .buttons-container {
-    height: calc(100vh - (15vh + 60vh + 12vh));
+    height: calc(100vh - (15vh + 60vh + 10vh));
 }
