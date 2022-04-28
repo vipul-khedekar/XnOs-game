@@ -23,7 +23,27 @@ body {
 }
 
 .game-container {
+    box-sizing: border-box;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 9rem 9rem 9rem;
+    grid-template-rows: 9rem 9rem 9rem;
     height: 60vh;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 2px solid #000000;
+    font-size: 6rem;
+}
+
+.tile:hover {
+    background-color: #d3d3d3;
 }
 
 .message-area {
