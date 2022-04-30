@@ -23,6 +23,21 @@ class GAME {
         this.tile9 = tile9;
         this.newGame();
     }
+    newGame() {
+        this.tile1.innerText = ``;
+        this.tile2.innerText = ``;
+        this.tile3.innerText = ``;
+        this.tile4.innerText = ``;
+        this.tile5.innerText = ``;
+        this.tile6.innerText = ``;
+        this.tile7.innerText = ``;
+        this.tile8.innerText = ``;
+        this.tile9.innerText = ``;
+    }
 }
 
 const game = new GAME(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9);
+
+newGame.addEventListener(`click`, () => {
+    game.newGame();
+});
