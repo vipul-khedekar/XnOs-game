@@ -22,7 +22,6 @@ class GAME {
         this.tile7 = tile7;
         this.tile8 = tile8;
         this.tile9 = tile9;
-        this.turn = 0;
         this.newGame();
     }
 
@@ -43,10 +42,10 @@ class GAME {
     }
 
     playLogic(tile, turn) {
-        if(turn%2 === 0) {
+        if(turn % 2 === 0) {
             tile.innerText = `o`;
         }
-        if(turn%2 === 1) {
+        if(turn % 2 === 1) {
             tile.innerText = `x`;
         }
     }
@@ -63,6 +62,7 @@ let turn = 0;
 tiles.forEach((tile) => {
     tile.addEventListener(`click`, () => {
         turn = game.turnCounter(turn);
+        if(tile.innerText !== ``) { return }
         game.playLogic(tile, turn);
     });
 });
