@@ -1,3 +1,4 @@
+const tiles = document.querySelectorAll(`[data-tiles]`);
 const tile1 = document.querySelector(`[data-tile1]`);
 const tile2 = document.querySelector(`[data-tile2]`);
 const tile3 = document.querySelector(`[data-tile3]`);
@@ -21,8 +22,10 @@ class GAME {
         this.tile7 = tile7;
         this.tile8 = tile8;
         this.tile9 = tile9;
+        this.turn = 0;
         this.newGame();
     }
+
     newGame() {
         this.tile1.innerText = ``;
         this.tile2.innerText = ``;
@@ -34,10 +37,32 @@ class GAME {
         this.tile8.innerText = ``;
         this.tile9.innerText = ``;
     }
+
+    turnCounter(turn) {
+        return turn = turn+1;
+    }
+
+    playLogic(tile, turn) {
+        if(turn%2 === 0) {
+            tile.innerText = `o`;
+        }
+        if(turn%2 === 1) {
+            tile.innerText = `x`;
+        }
+    }
 }
 
 const game = new GAME(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9);
 
 newGame.addEventListener(`click`, () => {
     game.newGame();
+    turn = 0;
+});
+
+let turn = 0;
+tiles.forEach((tile) => {
+    tile.addEventListener(`click`, () => {
+        turn = game.turnCounter(turn);
+        game.playLogic(tile, turn);
+    });
 });
