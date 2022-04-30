@@ -12,7 +12,7 @@ const message = document.querySelector(`[data-message]`);
 const newGame = document.querySelector(`[data-new-game]`);
 
 class GAME {
-    constructor(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9) {
+    constructor() {
         this.tile1 = tile1;
         this.tile2 = tile2;
         this.tile3 = tile3;
@@ -22,6 +22,7 @@ class GAME {
         this.tile7 = tile7;
         this.tile8 = tile8;
         this.tile9 = tile9;
+        this.message = message;
         this.newGame();
     }
 
@@ -35,6 +36,7 @@ class GAME {
         this.tile7.innerText = ``;
         this.tile8.innerText = ``;
         this.tile9.innerText = ``;
+        this.message.innerText = `start`;
     }
 
     turnCounter(turn) {
@@ -43,15 +45,15 @@ class GAME {
 
     playLogic(tile, turn) {
         if(turn % 2 === 0) {
-            tile.innerText = `o`;
+            tile.innerText = `⊙`;
         }
         if(turn % 2 === 1) {
-            tile.innerText = `x`;
+            tile.innerText = `×`;
         }
     }
 }
 
-const game = new GAME(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9);
+const game = new GAME();
 
 newGame.addEventListener(`click`, () => {
     game.newGame();
