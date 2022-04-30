@@ -57,6 +57,7 @@ body {
     position: relative;
     box-shadow: #a9a9a9 0px 5px 5px;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .button-container {
