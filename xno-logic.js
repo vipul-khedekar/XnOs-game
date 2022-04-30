@@ -9,3 +9,20 @@ const tile8 = document.querySelector(`[data-tile8]`);
 const tile9 = document.querySelector(`[data-tile9]`);
 const message = document.querySelector(`[data-message]`);
 const newGame = document.querySelector(`[data-new-game]`);
+
+class GAME {
+    constructor(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9) {
+        this.tile1 = tile1;
+        this.tile2 = tile2;
+        this.tile3 = tile3;
+        this.tile4 = tile4;
+        this.tile5 = tile5;
+        this.tile6 = tile6;
+        this.tile7 = tile7;
+        this.tile8 = tile8;
+        this.tile9 = tile9;
+        this.newGame();
+    }
+}
+
+const game = new GAME(tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9);
