@@ -40,7 +40,7 @@ class GAME {
     }
 
     turnCounter(turn) {
-        return turn = turn+1;
+        return turn = turn + 1;
     }
 
     playLogic(tile, turn) {
@@ -53,27 +53,28 @@ class GAME {
             this.message.innerText = `Player ⊙'s turn.`;
         }
     }
+
     checkWinner() {
-        if((this.tile1.innerText === `×` && this.tile2.innerText === `×` && this.tile3.innerText === `×`) ||
-        (this.tile4.innerText === `×` && this.tile5.innerText === `×` && this.tile6.innerText === `×`) ||
-        (this.tile7.innerText === `×` && this.tile8.innerText === `×` && this.tile9.innerText === `×`) ||
-        (this.tile1.innerText === `×` && this.tile4.innerText === `×` && this.tile7.innerText === `×`) ||
-        (this.tile2.innerText === `×` && this.tile5.innerText === `×` && this.tile8.innerText === `×`) ||
-        (this.tile3.innerText === `×` && this.tile6.innerText === `×` && this.tile9.innerText === `×`) ||
-        (this.tile1.innerText === `×` && this.tile5.innerText === `×` && this.tile9.innerText === `×`) ||
-        (this.tile3.innerText === `×` && this.tile5.innerText === `×` && this.tile7.innerText === `×`)) {
-            this.message.innerText = `Player with × wins.`;
+        if ((this.tile1.innerText === `×` && this.tile2.innerText === `×` && this.tile3.innerText === `×`) ||
+            (this.tile4.innerText === `×` && this.tile5.innerText === `×` && this.tile6.innerText === `×`) ||
+            (this.tile7.innerText === `×` && this.tile8.innerText === `×` && this.tile9.innerText === `×`) ||
+            (this.tile1.innerText === `×` && this.tile4.innerText === `×` && this.tile7.innerText === `×`) ||
+            (this.tile2.innerText === `×` && this.tile5.innerText === `×` && this.tile8.innerText === `×`) ||
+            (this.tile3.innerText === `×` && this.tile6.innerText === `×` && this.tile9.innerText === `×`) ||
+            (this.tile1.innerText === `×` && this.tile5.innerText === `×` && this.tile9.innerText === `×`) ||
+            (this.tile3.innerText === `×` && this.tile5.innerText === `×` && this.tile7.innerText === `×`)) {
+                this.message.innerText = `Player with × wins.`;
         }
 
-        if((this.tile1.innerText === `⊙` && this.tile2.innerText === `⊙` && this.tile3.innerText === `⊙`) ||
-        (this.tile4.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile6.innerText === `⊙`) ||
-        (this.tile7.innerText === `⊙` && this.tile8.innerText === `⊙` && this.tile9.innerText === `⊙`) ||
-        (this.tile1.innerText === `⊙` && this.tile4.innerText === `⊙` && this.tile7.innerText === `⊙`) ||
-        (this.tile2.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile8.innerText === `⊙`) ||
-        (this.tile3.innerText === `⊙` && this.tile6.innerText === `⊙` && this.tile9.innerText === `⊙`) ||
-        (this.tile1.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile9.innerText === `⊙`) ||
-        (this.tile3.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile7.innerText === `⊙`)) {
-            this.message.innerText = `Player with ⊙ wins.`;
+        if ((this.tile1.innerText === `⊙` && this.tile2.innerText === `⊙` && this.tile3.innerText === `⊙`) ||
+            (this.tile4.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile6.innerText === `⊙`) ||
+            (this.tile7.innerText === `⊙` && this.tile8.innerText === `⊙` && this.tile9.innerText === `⊙`) ||
+            (this.tile1.innerText === `⊙` && this.tile4.innerText === `⊙` && this.tile7.innerText === `⊙`) ||
+            (this.tile2.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile8.innerText === `⊙`) ||
+            (this.tile3.innerText === `⊙` && this.tile6.innerText === `⊙` && this.tile9.innerText === `⊙`) ||
+            (this.tile1.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile9.innerText === `⊙`) ||
+            (this.tile3.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile7.innerText === `⊙`)) {
+                this.message.innerText = `Player with ⊙ wins.`;
         }
    }
 }
