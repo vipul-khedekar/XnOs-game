@@ -51,6 +51,29 @@ class GAME {
             tile.innerText = `×`;
         }
     }
+    checkWinner() {
+        if((this.tile1.innerText === `×` && this.tile2.innerText === `×` && this.tile3.innerText === `×`) ||
+        (this.tile4.innerText === `×` && this.tile5.innerText === `×` && this.tile6.innerText === `×`) ||
+        (this.tile7.innerText === `×` && this.tile8.innerText === `×` && this.tile9.innerText === `×`) ||
+        (this.tile1.innerText === `×` && this.tile4.innerText === `×` && this.tile7.innerText === `×`) ||
+        (this.tile2.innerText === `×` && this.tile5.innerText === `×` && this.tile8.innerText === `×`) ||
+        (this.tile3.innerText === `×` && this.tile6.innerText === `×` && this.tile9.innerText === `×`) ||
+        (this.tile1.innerText === `×` && this.tile5.innerText === `×` && this.tile9.innerText === `×`) ||
+        (this.tile3.innerText === `×` && this.tile5.innerText === `×` && this.tile7.innerText === `×`)) {
+            this.message.innerText = `Player with × wins.`;
+        }
+
+        if((this.tile1.innerText === `⊙` && this.tile2.innerText === `⊙` && this.tile3.innerText === `⊙`) ||
+        (this.tile4.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile6.innerText === `⊙`) ||
+        (this.tile7.innerText === `⊙` && this.tile8.innerText === `⊙` && this.tile9.innerText === `⊙`) ||
+        (this.tile1.innerText === `⊙` && this.tile4.innerText === `⊙` && this.tile7.innerText === `⊙`) ||
+        (this.tile2.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile8.innerText === `⊙`) ||
+        (this.tile3.innerText === `⊙` && this.tile6.innerText === `⊙` && this.tile9.innerText === `⊙`) ||
+        (this.tile1.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile9.innerText === `⊙`) ||
+        (this.tile3.innerText === `⊙` && this.tile5.innerText === `⊙` && this.tile7.innerText === `⊙`)) {
+            this.message.innerText = `Player with ⊙ wins.`;
+        }
+   }
 }
 
 const game = new GAME();
@@ -66,5 +89,6 @@ tiles.forEach((tile) => {
         turn = game.turnCounter(turn);
         if(tile.innerText !== ``) { return }
         game.playLogic(tile, turn);
+        game.checkWinner();
     });
 });
