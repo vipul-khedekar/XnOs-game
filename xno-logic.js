@@ -36,7 +36,7 @@ class GAME {
         this.tile7.innerText = ``;
         this.tile8.innerText = ``;
         this.tile9.innerText = ``;
-        this.message.innerText = `start`;
+        this.message.innerText = `First player will mark ×, second player will mark ⊙. Both will take turns. The first one to mark their symbol three consecutive order will win.`;
     }
 
     turnCounter(turn) {
@@ -46,9 +46,11 @@ class GAME {
     playLogic(tile, turn) {
         if(turn % 2 === 0) {
             tile.innerText = `⊙`;
+            this.message.innerText = `Player ×'s turn.`;
         }
         if(turn % 2 === 1) {
             tile.innerText = `×`;
+            this.message.innerText = `Player ⊙'s turn.`;
         }
     }
     checkWinner() {
@@ -87,7 +89,10 @@ let turn = 0;
 tiles.forEach((tile) => {
     tile.addEventListener(`click`, () => {
         turn = game.turnCounter(turn);
-        if(tile.innerText !== ``) { return }
+        if(tile.innerText !== ``) {
+            game.message.innerText = `Other player's marked tile cannot be overwritten.`;
+            turn --;
+            return }
         game.playLogic(tile, turn);
         game.checkWinner();
     });
